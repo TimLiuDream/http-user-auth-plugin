@@ -39,13 +39,17 @@ public class ExamplePluginConfiguration {
             } else if (token.isValue()) {
                 if ("test".equals(currentFieldName)) {
                     test = parser.text();
-                } else if ("http.user.auth.enable".equals(currentFieldName)){
+                    System.out.println(test);
+                } else if ("enable".equals(currentFieldName)) {
                     enable = parser.booleanValue();
-                } else if ("http.user.auth.name".equals(currentFieldName)){
+                    System.out.println(enable);
+                } else if ("name".equals(currentFieldName)) {
                     userName = parser.text();
-                } else if ("http.user.auth.password".equals(currentFieldName)){
+                    System.out.println(userName);
+                } else if ("password".equals(currentFieldName)) {
                     userPassword = parser.text();
-                } else{
+                    System.out.println(userPassword);
+                } else {
                     throw new ElasticsearchParseException("Unrecognized config key: {}", currentFieldName);
                 }
             } else {
@@ -58,15 +62,15 @@ public class ExamplePluginConfiguration {
         return test;
     }
 
-    public String getUserName(){
+    public String getUserName() {
         return userName;
     }
 
-    public boolean getEnable(){
+    public boolean getEnable() {
         return enable;
     }
 
-    public String getUserPassword(){
+    public String getUserPassword() {
         return userPassword;
     }
 }
