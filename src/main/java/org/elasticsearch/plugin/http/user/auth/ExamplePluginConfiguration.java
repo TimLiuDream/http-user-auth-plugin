@@ -39,16 +39,16 @@ public class ExamplePluginConfiguration {
             } else if (token.isValue()) {
                 if ("test".equals(currentFieldName)) {
                     test = parser.text();
-                    System.out.println(test);
+//                    System.out.println(test);
                 } else if ("enable".equals(currentFieldName)) {
                     enable = parser.booleanValue();
-                    System.out.println(enable);
+//                    System.out.println(enable);
                 } else if ("name".equals(currentFieldName)) {
                     userName = parser.text();
-                    System.out.println(userName);
+//                    System.out.println(userName);
                 } else if ("password".equals(currentFieldName)) {
                     userPassword = parser.text();
-                    System.out.println(userPassword);
+//                    System.out.println(userPassword);
                 } else {
                     throw new ElasticsearchParseException("Unrecognized config key: {}", currentFieldName);
                 }

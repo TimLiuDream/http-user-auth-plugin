@@ -32,20 +32,20 @@ public class AuthRestFilter extends RestFilter {
 		boolean enable = config.getEnable();
 		String name = config.getUserName();
 		String password = config.getUserPassword();
-		System.out.printf("enable: %s\n", enable);
-		System.out.printf("name: %s\n", name);
-		System.out.printf("password: %s\n", password);
+//		System.out.printf("enable: %s\n", enable);
+//		System.out.printf("name: %s\n", name);
+//		System.out.printf("password: %s\n", password);
 		if (enable) {
 			try {
 				// auth check
 				Iterable<Entry<String, String>> headers = request.headers();
 				for (Entry<String, String> header : headers) {
-					System.out.printf("header.getKey(): %s\n", header.getKey());
-					System.out.printf("header.getValue(): %s\n", header.getValue());
+//					System.out.printf("header.getKey(): %s\n", header.getKey());
+//					System.out.printf("header.getValue(): %s\n", header.getValue());
 
 					if (header.getKey().toLowerCase().equals("authorization")) {
 						String authStr = header.getValue();
-						System.out.printf("authStr: %s\n", authStr);
+//						System.out.printf("authStr: %s\n", authStr);
 						if (authStr == null || authStr.equals("")) {
 							// forbidden path
 							BytesRestResponse resp = new BytesRestResponse(RestStatus.FORBIDDEN, "Forbidden path");
