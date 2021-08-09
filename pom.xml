@@ -12,7 +12,7 @@
     <url>https://github.com/TomSearch/elasticsearch-http-user-auth/</url>
     
     <properties>
-        <elasticsearch.version>2.4.1</elasticsearch.version>
+        <elasticsearch.version>6.8.17</elasticsearch.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
